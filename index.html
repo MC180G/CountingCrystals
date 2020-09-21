@@ -1,85 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel = "stylesheet" href = "style.css" >
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
 
-        <title>Crystal Game</title>
-      </head>
-      <body>
-        
-        <header>Crystals Collection</header>
-        
-        <div id ="container">
-          <!-- * The player will be shown a random number at the start of the game.*-->         
-          <h1 class = "text-center" id = "rdm-num-prm"></h1>
-          
-          
-          <!-- * There will be four crystals displayed as buttons on the page. * -->
-          
-        <h2 class="text-center">Click any crystal! Match this number without going over.</h2>
-        <button id = "btn1">Yellow Crystal</button>
-      <button id = "btn2">Blue Crystal</button>
-      <button id = "btn3">Green Crystal</button>
-      <button id = "btn4">Red Crystal</button>
+    <title>Crystal Game</title>
+  </head>
+  <body>
+    <header>Crystals Collection</header>
 
-      <h3 class="text-center" id= "ply-scr"></h3>
+    <div id="container">
+      <div id="targetScore">
+        <!-- * The player will be shown a random number at the start of the game.*-->
+        <h1 class="text-center" id="rdm-num-prm">0</h1>
+      </div>
+
+      <div id="crystals">
+        <!-- * There will be four crystals displayed as buttons on the page. * -->
+
+        <h2 class="text-center">
+          Click any crystal! Match this number without going over.
+        </h2>
+        <button id="btn1">Yellow Crystal</button>
+        <button id="btn2">Blue Crystal</button>
+        <button id="btn3">Green Crystal</button>
+        <button id="btn4">Red Crystal</button>
+      </div>
+
+      <div id="currentScore">
+        <h3 class="text-center" id="ply-scr">0</h3>
+      </div>
     </div>
 
+    <!--* The game restarts whenever the player wins or loses.
+      
+      * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+      
+      * The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.-->
 
-    
-    
-    <script>  
-
-        // * The random number shown at the start of the game should be between 19 - 120.
-          let upper = 120
-          let lower = 19    
-          let randomPrime = Math.floor(Math.random() * (upper - lower + 1)) + lower;
-        $("#rdm-num-prm").text(randomPrime);
-        
-      // * Each crystal should have a random hidden value between 1 - 12. -->
-        let numberOptions = Math.floor(Math.random() * 12 + 1); 
-        let (i = 0; i < 4; i ++);
-        let randomCrystal2 = Math.floor(Math.random() * 12 + 1); 
-        let randomCrystal3 = Math.floor(Math.random() * 12 + 1); 
-        let randomCrystal4 = Math.floor(Math.random() * 12 + 1); 
-
-        imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-
-        // <!-- * When the player clicks on a crystal, it will add a specific amount of points to the player's total score. 
-        $("#btn1").on("click", function() {
-          var crystalValue = ($(this).attr("data-crystalvalue"));
-    crystalValue = parseInt(crystalValue);
-          counter += crystalValue;
-          $("#ply-scr").text(counter);        
-
-        })
-
-
-        //   * Your game will hide this amount until the player clicks a crystal.
-        //   * When they do click one, update the player's score counter. -->
-
-        // <!-- * The player wins if their total score matches the random number from the beginning of the game.
-        // if randomCrystal === randomPrime
-        // $().text("You're a big winner!")
-        
-        // // // <!--* The player loses if their score goes above the random number.
-        // if randomCrystal > randomPrime
-        // $().text("You blew it, stupid!")
-</script>   
-
-
-
-
-<!--* The game restarts whenever the player wins or loses.
-
-  * When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
-
-* The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.-->
-
-
-
-
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+  </body>
 </html>
