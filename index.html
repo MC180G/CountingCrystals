@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
 
     <title>Crystal Game</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>Crystals Collection</header>
 
+
     <div id="container">
-      <div id="targetScore">
-        <!-- * The player will be shown a random number at the start of the game.*-->
-        <h1 class="text-center" id="rdm-num-prm">0</h1>
-      </div>
+        <div class="flex-container">
 
-      <div id="crystals">
-        <!-- * There will be four crystals displayed as buttons on the page. * -->
+            <div>WINS
+                <h2 id="wins">0</h2>
+            </div>
+            <div id="targetScore">
+                <!-- * The player will be shown a random number at the start of the game.*-->
+                <h1 class="text-center" id="rdm-num-prm">0</h1>
+            </div>
+            <div>LOSSES
+                <h2 id="losses">0</h2>
+            </div>
+        </div>
+        <div id="crystals">
+            <!-- * There will be four crystals displayed as buttons on the page. * -->
 
-        <h2 class="text-center">
-          Click any crystal! Match this number without going over.
-        </h2>
-        <button id="yellow">Yellow Crystal</button>
-        <button id="blue">Blue Crystal</button>
-        <button id="green">Green Crystal</button>
-        <button id="red">Red Crystal</button>
-      </div>
+            <h2 class="text-center">
+                Click any crystal! Match this number without going over.
+            </h2>
+            <button id="yellow">Yellow Crystal</button>
+            <button id="blue">Blue Crystal</button>
+            <button id="green">Green Crystal</button>
+            <button id="red">Red Crystal</button>
+        </div>
 
-      <div id="currentScore">
-        <h3 class="text-center" id="ply-scr">0</h3>
-      </div>
+        <div id="currentScore">
+            <h3 class="text-center" id="ply-scr">0</h3>
+        </div>
     </div>
 
     <!--* The game restarts whenever the player wins or loses.
@@ -43,5 +51,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
-  </body>
+</body>
+
 </html>

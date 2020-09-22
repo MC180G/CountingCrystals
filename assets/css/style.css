@@ -1,9 +1,12 @@
 body {
     background-color: aquamarine;
-    
 }
 
 #container {
     background-color: aquamarine;
-    
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
 }
