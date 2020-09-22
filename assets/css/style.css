@@ -9,4 +9,17 @@ body {
 .flex-container {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+#crystals {
+    justify-content: center;
+}
+
+#wins {
+    float: left;
+}
+
+#losses {
+    float: right;
 }
