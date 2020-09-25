@@ -1,5 +1,5 @@
 body {
-    background-color: aquamarine;
+    background-image: url("/assets/images/background_img.jpg");
 }
 
 #container {
@@ -15,12 +15,11 @@ body {
 #crystals {
     display: flex;
     justify-content: space-around;
+    background-color: white;
 }
 
-#wins {
-    float: left;
-}
-
-#losses {
-    float: right;
+header {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    text-align: center;
 }
